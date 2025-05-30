@@ -9,9 +9,10 @@
 }
 
 body {
-    background-color: rgba(233, 233, 233, 0.822);
     /* font-family: "Titan One", sans-serif; */
+    background-color: rgb(32, 1, 90);
     font-family: "Spectral" , serif;
+    color: white;
 }
 
 img,video {
@@ -28,8 +29,8 @@ img,video {
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 1rem 1.5rem 3rem;
-    background-color: rgb(233, 233, 233);
     z-index: 999;
+    background-color: rgb(32, 1, 90);
 }
 
 .logo {
@@ -38,7 +39,7 @@ img,video {
 }
 
 a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 18px;
 }
@@ -80,6 +81,7 @@ a {
     width: 270px;
     height: 40px;
     background-color: rgb(184, 184, 184);
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,6 +141,7 @@ input::placeholder {
     justify-content: space-around;
     font-weight: 700;
     font-family: "Spectral" , serif;
+    color: black;
 }
 
 .mobile-btn {
@@ -153,6 +156,106 @@ input::placeholder {
 
 .menuicon {
     display: none !important;
+}
+
+.section2 {
+    margin-top: 17rem;
+    /* border: 2px solid red; */
+    height: fit-content;
+    padding-left: 4rem;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    /* max-width: 800px; */
+    margin: auto;
+    /* border: 1px solid; */
+    height: 400px;
+}
+
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.carousel-track::-webkit-scrollbar {
+    width: 0;
+}
+  
+.carousel-item {
+    flex: 0 0 25%; /* 4 items per view */
+    height: 350px;
+    scroll-snap-align: start;
+    /* background: #f0f0f0; */
+    display: grid;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.carousel-item:hover {
+    background-color: rgba(158, 158, 157, 0.205);
+    border-radius: 20px;
+    color: white;
+}
+
+.carousel-item .img {
+    /* border: 1px solid #ccc; */
+    /* background-color: rgba(128, 128, 128, 0.144); */
+    position: relative;
+    height: 300px;
+}
+
+.carousel-item .imgdesc {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 30px;
+}
+
+.carousel-item p {
+    font-size: 13px;
+    font-family: "Spectral" , serif;
+}
+
+.carousel-item h5 {
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.carousel-btn {
+    height: 40px;
+    color: black;
+    border: 1px solid;
+    width: 40px;
+    cursor: pointer;
+    background-color: rgb(184, 184, 184);
+    border: 1px solid rgb(109, 109, 109);
+}
+
+.caro-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    column-gap: 10px;
+    margin: auto;
+    width: fit-content;
+}
+
+.section2 h1 {
+    font-family: "Titan One", sans-serif;
+    font-size: 50px;
+}
+
+.section3 {
+    height: 300px;
 }
 
 @media (max-width: 1024px) {
@@ -212,6 +315,12 @@ input::placeholder {
         font-weight: 700;
         font-family: "Spectral" , serif;
     }
+    .carousel-item {
+        flex: 0 0 50%; /* 2 items per view */
+    }
+    .section2 {
+        margin-top: 29rem;
+    }
 }
 
 @media(max-width: 600px) {
@@ -248,5 +357,12 @@ input::placeholder {
     input {
         width: 80vw;
         /* border: 1px solid; */
+    }
+    .section2 {
+        margin-top: 17rem;
+        padding-left: 1rem;
+    }
+    .carousel-item {
+        flex: 0 0 100%; /* 1 item per view */
     }
 }
